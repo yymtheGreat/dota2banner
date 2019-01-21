@@ -1,0 +1,101 @@
+$(function() {
+    var timer = null;
+    $('#dota2user').on('mouseenter', '.userin', function() {
+        var that = $(this);
+        var pop = that.find('.pop');
+        var url = encodeURIComponent(window.location.href);
+        var time = (new Date()).getTime();
+        var user = that.find('span').attr('data-user');
+        var info = JSON.parse(sessionStorage.getItem('dota2user'));
+        if (pop.length) return;
+        if (info && user == info.user && (time - info.time < 10 * 60 * 1000)) { that.append(createUserInfo(info['data'])); return }
+        $.ajax({
+            type: 'GET',
+            async: true,
+            url: '//www.dota2.com.cn/user/info?lr=' + url,
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            jsonpCallback: 'callbackStatus',
+            success: function(data) {
+                if (data.status == 'success') {
+                    var html = createUserInfo(data['data']);
+                    var date = new Date();
+                    var info = { 'time': date.getTime(), 'user': data['data']['username'], 'data': data['data'] };
+                    that.find('span').attr('data-user', data['data']['username']);
+                    that.append($(html));
+                    sessionStorage.setItem('dota2user', JSON.stringify(info));
+                }
+            }
+        });
+    }).on('mouseleave', '.userin', function(e) {
+        var that = $(this);
+        var pop = that.find('.pop');
+        var target = $(e.relatedTarget);
+        timer = setTimeout(function() {
+            if (target.is(pop) || target.parents().is(pop)) return;
+            else pop.remove();
+        }, 500);
+
+    });
+
+    $('#close-pop').on('click', function() {
+        var pop = $(this).parents('.pop');
+        pop.remove();
+        localStorage.setItem('isShowedLoginTip', true)
+    });
+
+    //wx dialog
+    (function(){
+        var $wxdialog = $('#j-navwxdialog');
+        var $overlay = $('#Dota2_overlay');
+
+        $('#j-navwxlink').click(function(){
+            $wxdialog.show();
+            $overlay.show();
+        });
+
+        $('#j-wxclose').click(function(){
+            $wxdialog.hide();
+            $overlay.hide();
+        });
+    })();
+});
+
+/*function showTip() {
+    var btnLogin = $('#btn-login');
+    var pop = $('<div class="pop in">登录后可查看账号信息<span><i class="nav_icon icon-close" id="close-pop"></i></span></div>');
+    var isShowedLoginTip = localStorage.getItem('isShowedLoginTip');
+
+    if (isShowedLoginTip !== 'true') {
+        pop.appendTo(btnLogin);
+    }
+}*/
+
+function createUserInfo(data) {
+    var html = ['<div class="pop"><div class="info_top">',
+        '<h3>DOTA2账号详情<a href="http://members.dota2.com.cn/info" target="_blank"><i class="nav_icon icon-help"></i></a></h3>',
+        '<div class="info_detail">',
+        '<div class="avatar"><img src="' + data['avatarfull'] + '" alt="' + data['personaname'] + '" /></div>',
+        '<ul class="items">',
+        '<li class="item"><span>游戏昵称：</span><span>' + data['personaname'] + '</span></li>',
+        '<li class="item"><span>DOTA2ID：</span><span>' + data['dota2id'] + '</span></li>',
+        '<li class="item"><span>账号状态：</span><span class="' + (data['personastate'] == '在线' ? 'active' : '') + '">' + data['personastate'] + '</span></li>',
+        '<li class="item"><span>上次在线：</span><span>' + data['lastlogoff'] + '</span></li>',
+        '</ul></div>',
+        '<div class="passport"><span>完美通行证：</span><span>' + data['username'] + '</span></div>',
+        '</div>',
+        '<div class="info_bottom">',
+        '<div class="scurity"><span>账号安全：</span>',
+        '<div>',
+        '<span class="' + (data['isIndulge'] ? 'active' : '') + '"><i class="nav_icon icon-reg"></i>' + (data['isIndulge'] ? '已' : '未') + '登记</span>',
+        '<span class="' + (data['mobile'] ? 'active' : '') + '"><i class="nav_icon icon-mobile"></i>' + (data['mobile'] ? '已' : '未') + '绑定</span>',
+        '<span class="' + (data['email'] ? 'active' : '') + '"><i class="nav_icon icon-email"></i>' + (data['email'] ? '已' : '未') + '绑定</span>',
+        '</div></div>',
+        '<div class="money"><span>账号余额：</span><div><span><b>' + (data['amount'] || 0) + '</b>刀币</span><a href="http://pay.wanmei.com/new/dota2/index.do?inGame=0" target="_blank">充值刀币</a></div></div>',
+        '</div>' +
+        '<a href="' + (data['is_mobile'] ? data['logout_url_mobile'] : data['logout_url_iframe'] ) + '" class="info-logout">退出登录</a>' +
+        '</div>'
+    ];
+
+    return html.join('');
+}

@@ -1,0 +1,600 @@
+body{
+    background-color: #1a1b1e;
+}
+.dota2_nav_container {
+    width: 100%;
+    height: 80px;
+    background: url(../images/header/data2.home.nav.bg.png) center top no-repeat;
+    color: #827c79;
+    font: 16px/16px 'Microsoft YaHei';
+}
+.dota2_nav_container,
+.nav_main .dota2nav .link_div{
+    -moz-box-sizing: content-box;  /*Firefox3.5+*/
+    -webkit-box-sizing: content-box; /*Safari3.2+*/
+    -o-box-sizing: content-box; /*Opera9.6*/
+    -ms-box-sizing: content-box; /*IE8*/
+    box-sizing: content-box; /*W3C标准(IE9+，Safari5.1+,Chrome10.0+,Opera10.6+都符合box-sizing的w3c标准语法)*/
+
+}
+
+.dota2_nav_container a,
+.dota2_nav_container a:hover {
+    text-decoration: none;
+}
+
+.nav_main {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav_main .nav_icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background: url('../images/header/icons.png') no-repeat top center;
+}
+
+.nav_icon.icon-user {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 100%;
+    border: 1px solid transparent;
+    background-position: -2px -297px;
+}
+
+.nav_icon.icon-close {
+    background-position: -1px -400px;
+}
+
+.nav_icon.icon-help {
+    background-position: -3px -73px;
+}
+
+.nav_icon.icon-reg {
+    background-position: -5px -270px;
+}
+
+.nav_icon.icon-reg-active {
+    background-position: -4px -240px;
+}
+
+.nav_icon.icon-mobile {
+    background-position: -2px -210px;
+}
+
+.nav_icon.icon-mobile-active {
+    background-position: -2px -180px;
+}
+
+.nav_icon.icon-email {
+    background-position: -4px -152px;
+}
+
+.nav_icon.icon-email-active {
+    background-position: -4px -152px;
+}
+
+.nav_main .nav_logo,
+.nav_main .dota2nav {
+    float: left;
+}
+
+.nav_main .nav_logo {
+    display: block;
+    width: 260px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-indent: -1000px;
+    background: url(../images/header/dota2.home.log.png) center top no-repeat;
+}
+
+.nav_main_loged .nav_logo {
+    margin-right: 20px;
+}
+
+.nav_main .dota2nav .link_div {
+    position: relative;
+    float: left;
+    padding: 23px 7px;
+    text-align: center;
+    width: 78px;
+}
+
+.nav_main .dota2nav .link_div a {
+    display: block;
+    font-size: 15px;
+    color: #827c79;
+}
+
+.nav_main .dota2nav .link_div:hover {
+    background: url(../images/header/data2.home.nav.hover.bg.png) top center no-repeat;
+    background-size: cover;
+}
+
+.nav_main .dota2nav .link_div:hover .link_pop {
+    display: block;
+    z-index: 1001;
+}
+
+.nav_main .dota2nav .link_div:hover .link_nav {
+    color: #00c0ff;
+}
+
+.nav_main .dota2nav .link_div span {
+    display: block;
+    font-size: 16px;
+}
+
+.nav_main .dota2nav .link_div .link_nav_e {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.nav_main .dota2nav .link_div .link_pop {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding-top: 10px;
+    width: 100%;
+    height: 278px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    background: url(../images/header/data2.home.submenu.bg.png) top center no-repeat;
+    background-size: cover;
+}
+.nav_main .dota2nav .link_div .link_pop a:hover {
+    color: #00c0ff;
+}
+/*
+ *  user login
+ */
+.nav_main .dota2user {
+    float: right;
+    width: 234px;
+    height: 100%;
+    margin-right: 0;
+    color: #ccc;
+    position: relative;
+}
+
+.nav_main .dota2user .info {
+    padding-left: 65px;
+    height: 100%;
+}
+
+.nav_main .dota2user .info-st {
+    padding: 3px 0 0 60px;
+    height: 100%;
+}
+
+.nav_main .dota2user .nav-avatar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 13px;
+    border-radius: 50%;
+    border: 1px solid #262323;
+    background-color: #101215;
+    box-sizing: content-box;
+}
+.nav_main .dota2user .info-st .nav-avatar {
+    left: -10px;
+}
+
+.nav_main .dota2user .avatar-default {
+    background-color: #101215;
+    background-image: url('../images/header/icons.png');
+    background-position: 13px -451px;
+
+}
+.nav_main .dota2user .enter-box{
+    margin-top: 17px;
+    display: block;
+}
+.nav_main .dota2user .info-st .enter-box {
+    margin-top: 16px;
+}
+.nav_main_loged .nav_main .dota2user .enter-box,
+.nav_main.nav_main_loged .dota2user .enter-box{
+    margin-top: 20px;
+}
+.nav_main_loged .nav_main .dota2user .info-st .enter-box,
+.nav_main.nav_main_loged .dota2user .info-st .enter-box {
+    margin-top: 16px;
+}
+
+.nav_main .dota2user .enter-box b{
+    font-weight: 400;
+    font-family: 'Microsoft YaHei';
+}
+.nav_main .dota2user .name {
+    font-size: 18px;
+    color: #00b7f4;
+    line-height: 1.2;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    margin: 0;
+    margin-bottom: 3px;
+}
+.nav_main_loged .nav_main .dota2user .name,
+.nav_main.nav_main_loged .dota2user .name{
+    margin-bottom: 0;
+}
+.nav_main .dota2user .info-st .name {
+    font-size: 14px;
+    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+}
+.nav_main .dota2user .name span{
+    color: #fff;
+    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+}
+.nav_main .dota2user .name .name-info{
+    display: block;
+    margin-bottom: 8px;
+}
+.nav_main .dota2user .name a {
+    color: #00b7f4;
+}
+.nav_main .dota2user .name a:hover {
+    text-decoration: underline;
+}
+.nav_main .dota2user .tt {
+    font-size: 12px;
+    color: #898989;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+}
+
+/*
+ * POP
+ */
+.nav_main .dota2user .pop {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 370px;
+    z-index: 9;
+    color: #898989;
+    background-color: #15161a;
+    border: 1px solid #020203;
+    visibility: hidden;
+    opacity: 0;
+    line-height: 1.5;
+    font-size: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75), inset 0 0 5px rgba(42, 41, 40, 0.35);
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav_main .dota2user .icon-user {
+    border: 1px solid #00c0ff;
+}
+
+.nav_main .dota2user:hover .userin .nav-avatar {
+    border-color: #00b7f4;
+    box-shadow: 0 0 0 1px #00b7f4;
+}
+
+.nav_main .dota2user:hover .pop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav_main .dota2user .pop:before,
+.nav_main .dota2user .pop:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 70px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 15px 15px;
+}
+
+.nav_main .dota2user .pop:before {
+    border-bottom-color: #020203;
+}
+
+.nav_main .dota2user .pop:after {
+    top: -29px;
+    border-bottom-color: #131315;
+}
+
+.nav_main .dota2user .info_top {
+    background-color: #131315;
+}
+
+.nav_main .dota2user .info_top h3 {
+    padding: 15px 20px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #1d1d1d;
+    font-weight: 400;
+    color: #898989;
+}
+
+.nav_main .dota2user .info_top h3 .nav_icon.icon-help {
+    margin: -3px 0 0 5px;
+}
+
+.nav_main .dota2user .info_detail {
+    padding: 15px 20px;
+    border-top: 1px solid #020203;
+    padding-left: 134px;
+}
+.nav_main .dota2user .info_detail .items{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.nav_main .dota2user .info_detail .avatar {
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #898989;
+    margin-left: -113px;
+}
+
+.nav_main .dota2user .info_detail .avatar img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.nav_main .dota2user .info_detail .item {
+    line-height: 26px;
+    font-size: 12px;
+    list-style: none;
+}
+
+.nav_main .dota2user .info_detail .item span {
+    display: inline-block;
+    word-break: break-all;
+}
+
+.nav_main .dota2user .info_detail .item .active {
+    color: #00c0ff;
+}
+
+.nav_main .dota2user .info_detail .item span:first-child {
+    width: 68px;
+}
+
+.nav_main .dota2user .passport {
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.nav_main .dota2user .info_bottom {
+    padding: 18px 20px;
+}
+
+.nav_main .dota2user .info_bottom .scurity>span,
+.nav_main .dota2user .info_bottom .scurity>div,
+.nav_main .dota2user .info_bottom .money>span,
+.nav_main .dota2user .info_bottom .money>div {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.nav_main .dota2user .info_bottom .scurity>div,
+.nav_main .dota2user .info_bottom .money>div {
+    margin-left: 15px;
+}
+
+.nav_main .dota2user .info_bottom .scurity .active {
+    color: #00c0ff;
+}
+
+.nav_main .dota2user .info_bottom .scurity .active .icon-reg {
+    background-position: -4px -240px;
+}
+
+.nav_main .dota2user .info_bottom .scurity .icon-mobile {
+    margin-right: 3px;
+}
+
+.nav_main .dota2user .info_bottom .scurity .active .icon-mobile {
+    background-position: 0 -180px;
+}
+
+.nav_main .dota2user .info_bottom .scurity .active .icon-email {
+    background-position: -4px -127px;
+}
+
+.nav_main .dota2user .info_bottom .scurity>div>span,
+.nav_main .dota2user .info_bottom .money>div>span {
+    margin-right: 20px;
+}
+
+.nav_main .dota2user .info_bottom .money>div>span>b {
+    color: #00c0ff;
+    margin-right: 5px;
+}
+
+.nav_main .dota2user .info_bottom .money>div>a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    background-color: #0180c2;
+    line-height: 25px;
+    border-radius: 1px;
+}
+
+.nav_main .dota2user .btn .pop {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 10px 0 10px 20px;
+    width: 162px;
+    line-height: 1.5;
+    z-index: 9;
+    background-color: #0180c2;
+    color: #fff;
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.nav_main .dota2user.hide {
+    display: none;
+}
+
+.nav_main .dota2user .btn-login .pop.in {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav_main .dota2user .btn-logout>span {
+    color: #898989;
+}
+
+.nav_main .dota2user .btn .pop span {
+    margin-left: 10px;
+}
+
+.nav_main .dota2user .btn .pop span:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #0180c2;
+    border-width: 8px 5px;
+}
+
+.nav_main .dota2user .btn .pop span:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 31px;
+    width: 0;
+    height: 19px;
+    border-left: 1px solid #4ea6d4;
+}
+
+.nav_main .dota2user .btn .pop .nav_icon {
+    margin-left: 6px;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.nav_main .dota2user .pop .info-logout {
+    color: #666;
+    font-size: 14px;
+    margin: 15px 20px 20px;
+    line-height: 35px;
+    display: block;
+    text-align: center;
+    border: 1px solid;
+}
+
+.nav_main .dota2user .pop .info-logout:hover {
+    color: #e04848;
+}
+
+.nav_wxdialog {
+    position: fixed;
+    z-index: 1004;
+    width: 620px;
+    height: 385px;
+    left: 50%;
+    top: 50%;
+    margin: -192px 0 0 -310px;
+    background: #2a282c url(../images/header/navwx_bg.jpg) no-repeat top center;
+    text-align: center;
+    color: #fff;
+}
+
+.nav_wxdialog h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 54px 0 14px 0;
+}
+
+.nav_wxdialog p {
+    font-size: 16px;
+    margin-bottom: 45px;
+    color: #999999;
+}
+
+.nav_wxdialog li {
+    display: inline-block;
+    width: 156px;
+    height: 196px;
+    margin: 0 20px;
+}
+
+.nav_wxdialog li i {
+    display: block;
+    width: 156px;
+    height: 156px;
+    background-color: #fff;
+}
+
+.nav_wxdialog .subscribe i {
+    background-image: url(../images/header/navwx_subscribe.png);
+}
+
+.nav_wxdialog .vservice i {
+    background-image: url(../images/header/navwx_vservice.png);
+}
+
+.nav_wxdialog li span {
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.nav_wxdialog .close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #3c2728;
+    right: -61px;
+    top: 0;
+}
+
+.nav_wxdialog .close:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../images/header/navwx_close.png);
+    opacity: 0.6;
+}
+
+.nav_wxdialog .close:hover:after {
+    opacity: 1;
+}

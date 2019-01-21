@@ -1,0 +1,553 @@
+dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, select, textarea, ul {
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:100%;
+    font-weight:400
+}
+body {
+    min-width:1337px;
+    min-height: 100%;
+    margin:0 auto;
+    padding:0;
+    font-size:12px;
+    background-color:#000;
+    font-family:"Microsoft YaHei", Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 1920px;
+}
+area {
+    outline:0
+}
+img {
+    border:0
+}
+ol, ul {
+    list-style:none
+}
+a {
+    text-decoration:none;
+    outline:0
+}
+a:hover {
+    text-decoration:none
+}
+.clearfix:after {
+    content:" ";
+    display:block;
+    height:0;
+    clear:both;
+    zoom:1
+}
+.bg-bottom {
+    position:absolute;
+    width:100%;
+    top:664px;
+    height:1315px;
+    background:url(/images/cover20180516/bottom.png) no-repeat center;
+    z-index:0
+}
+.bg-video {
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    outline: none;
+}
+.bg-video video{
+    position:absolute;
+    top:0;
+    width:1920px;
+    height:750px;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    transform:translateX(-50%);
+    z-index:0;
+    outline: none;
+}
+
+#dota2_topnav{
+    display: none;
+}
+
+.header {
+    position:relative;
+    z-index:1
+}
+.header .navbar {
+    height:110px;
+    background:url(https://img.dota2.com.cn/file/8c/22/8c226175a34d286348f7f759f5a42fa61533280508.png) no-repeat center top
+}
+.header .top-nav {
+    width:1200px;
+    margin:0 auto;
+    overflow:hidden
+}
+.header .top-nav li {
+    width:112px;
+    height:65px;
+    float:left;
+    text-align:center;
+    margin-left:66px;
+    padding-top:22px
+}
+.header .top-nav li a {
+    font-size:16px;
+    color:#999;
+    letter-spacing:1px
+}
+.header .top-nav li a:hover {
+    color:#FFF;
+    text-shadow:0 0 45px
+}
+.header .top-nav li:first-child {
+    margin-left:0
+}
+.header .top-nav li:first-child+li+li+li {
+    margin-left:264px
+}
+.header .dota2-logo-box {
+    position:absolute;
+    top:0;
+    left:50%;
+    width:156px;
+    height:78px;
+    margin-left:-79px;
+    overflow:hidden
+}
+.header .dota2-logo {
+    display:block;
+    height:78px
+}
+
+.wrapper{
+    min-height:1108px;
+    background:#000 url(/cover/181221/bg.jpg) center top no-repeat;
+    margin-top:-46px;
+}
+
+.banner {
+    position:relative;
+    height:779px;
+    width: 100%;
+    overflow: hidden;
+}
+.banner-content{
+    width:1300px;
+    margin:0 auto;
+    position:relative;
+}
+
+.banner-content .role-item{
+    position:absolute;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.banner-content .role-xvkong{
+    background:url(/cover/181221/bg-xvkong.png?v=1222);
+    width:118px;
+    height:123px;
+    left:118px;
+    top:60px;
+}
+.banner-content .role-xvkong:hover{
+    background-position:0 -123px;
+}
+.banner-content .role-chaoxi{
+    background:url(/cover/181221/bg-chaoxi.png?v=1222);
+    width:164px;
+    height:172px;
+    left:0;
+    top:216px;
+}
+.banner-content .role-chaoxi:hover{
+    background-position:0 -172px;
+}
+.banner-content .role-bingnv{
+    background:url(/cover/181221/bg-bingnv.png?v=1222);
+    width:118px;
+    height:123px;
+    left:224px;
+    top:524px;
+}
+.banner-content .role-bingnv:hover{
+    background-position:0 -123px;
+}
+.banner-content .role-fuwang{
+    background:url(/cover/181221/bg-fuwang.png?v=1222);
+    width:124px;
+    height:130px;
+    left:964px;
+    top:478px;
+}
+.banner-content .role-fuwang:hover{
+    background-position:0 -130px;
+}
+.banner-content .role-fenghuang{
+    background:url(/cover/181221/bg-fenghuang.png?v=1222);
+    width:123px;
+    height:125px;
+    left:1094px;
+    top:440px;
+}
+.banner-content .role-fenghuang:hover{
+    background-position:0 -125px;
+}
+.banner-content .role-panel{
+    width: 1333px;
+    height: 988px;
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    margin-left: -568px;
+}
+.banner-content .role-panel img{
+    vertical-align: top;
+    width:100%;
+}
+
+.slogan{
+    width: 1113px;
+    height: 807px;
+    background: url(/cover/181221/slogan.png) center top no-repeat;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    margin-left: -550px;
+}
+
+.banner-btn{
+    width:242px;
+    height:107px;
+    background:url(/cover/181221/bg-btn.png) no-repeat;
+    position:absolute;
+    left:50%;
+    bottom:20px;
+    margin-left:-121px;
+    z-index: 10;
+}
+.banner-btn:hover{
+    background-position:0 -107px;
+}
+
+.dun {
+    position:absolute;
+    z-index:999;
+    left:50%;
+    width:745px;
+    margin-left:-372px;
+    height:725px;
+    top:309px;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-tap-highlight-color:transparent;
+    background-color:#000;
+    opacity:0
+}
+.cover-content {
+    margin:30px auto 0;
+    text-align:center;
+    width: 1210px;
+}
+.cover-content li {
+    width:346px;
+    float:left;
+    margin-left:81px;
+    height: 200px;
+}
+.cover-content li:first-child {
+    margin-left:0
+}
+.cover-content li:hover .cover-group {
+    -webkit-transform:translateY(-22px);
+    -moz-transform:translateY(-22px);
+    -ms-transform:translateY(-22px);
+    transform:translateY(-22px);
+    opacity:1
+}
+.cover-content li:hover h4 {
+    display:block;
+    opacity:1;
+    visibility:inherit
+}
+.cover-content h4 {
+    visibility:hidden;
+    opacity:0;
+    font-size:18px;
+    color:#FFF;
+    margin-top:-10px;
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -ms-transition:all .5s ease;
+    transition:all .5s ease;
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    position: relative;
+    top: -180px;
+    left: 10px;
+}
+.cover-content .cover-group {
+    position: relative;
+    top: -103px;
+    left: -70px;
+    width: 503px;
+    height: 370px;
+    box-sizing: border-box;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    transition: all .6s ease;
+    opacity: 1;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.cover-content .advert-item:nth-of-type(1) .cover-group{
+    background-image: url(/cover/181221/bg-cover-group1.png);
+    padding: 93px 0px 0 20px;
+}
+.cover-content .advert-item:nth-of-type(2) .cover-group{
+    background-image: url(/cover/181221/bg-cover-group2.png);
+    padding: 88px 8px 0 0px;
+}
+.cover-content .advert-item:nth-of-type(3) .cover-group{
+    background-image: url(/cover/181221/bg-cover-group3.png);
+    padding: 92px 4px 0 0px;
+}
+
+.cover-content .cover-group img {
+    width:332px;
+    height:182px
+}
+
+
+/*鍒嗕韩*/
+.share-model {
+    background-color: #000;
+    clear: both;
+}
+
+.share-model .items {
+    width: 1078px;
+    margin: 0 auto;
+    padding: 42px 0;
+    border-bottom: 2px solid #131313
+}
+
+.share-model li {
+    float: left;
+    margin-right: 39px
+}
+
+.share-model li a {
+    display: block;
+    background: url(/images/cover20180516/icons.png) no-repeat;
+    height: 42px;
+    width: 104px
+}
+
+.share-model li a:hover {
+    background-position-y: -42px
+}
+
+.share-model li a:hover .wechat-tip {
+    opacity: 1;
+    visibility: inherit
+}
+
+.share-model li:nth-child(2) a {
+    width: 118px;
+    background-position-x: -143px
+}
+
+.share-model li:nth-child(3) {
+    margin-right: 122px
+}
+
+.share-model li:nth-child(3) a {
+    width: 104px;
+    background-position-x: -301px
+}
+
+.share-model li:nth-child(4) a {
+    width: 87px;
+    background-position-x: -527px
+}
+
+.share-model li:nth-child(5) a {
+    position: relative;
+    width: 85px;
+    background-position-x: -654px
+}
+
+.share-model li:nth-child(5) .wechat-tip {
+    position: absolute;
+    top: -160px;
+    left: -61px;
+    visibility: hidden;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease
+}
+
+.share-model li:nth-child(6) {
+    margin-right: 123px
+}
+
+.share-model li:nth-child(6) a {
+    width: 88px;
+    background-position-x: -780px
+}
+
+.share-model li:nth-child(7) {
+    margin-right: 0
+}
+
+.share-model li:nth-child(7) a {
+    width: 88px;
+    background-position-x: 100%
+}
+
+
+/*cover-0905*/
+.play{
+    opacity: 0;
+    display: block;
+    width: 98px;
+    height: 93px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -49px;
+    margin-top: -85px;
+    background: url(/cover/180826/icon-play.png) no-repeat center;
+    cursor: pointer;
+    z-index: 12;
+    transition: all 0.5s ease-in-out ;
+}
+
+.wrapper-video{
+    width: 100%;
+    min-width: 1337px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 15;
+    display: none;
+}
+.wrapper-video .video{
+    /*width: 100%;*/
+    width: 1136px;
+    height: 640px;
+    background: url(/cover/180826/bg-wrapper.png) no-repeat center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -568px;
+    margin-top: -320px;
+}
+.wrapper-video .video video{
+    width: 1088px;
+    height: 577px;
+    position: absolute;
+    top: 30px;
+    left: 27px;
+}
+.close{
+    width: 66px;
+    height: 66px;
+    background: url(/cover/180826/icon-close.png) no-repeat center;
+    position: absolute;
+    top: 60px;
+    right: -65px;
+    cursor: pointer;
+}
+
+
+.mobile_video{
+    width: 1088px;
+    height: 577px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -544px;
+    margin-top: -288px;
+    z-index: 15;
+}
+/*cover-1128*/
+.banner-title{
+    position: relative;
+    z-index: 3;
+    width: 635px;
+    height: 424px;
+    margin: 0 auto;
+    background-image: url(/cover/181128/banner-tit.png);
+    top: 281px;
+    left: -5px;
+}
+
+.share-model{
+    margin-top: -51px;
+}
+
+
+.floating{
+    -ms-animation: floating 1.3s ease-in-out infinite alternate;
+    -webkit-animation: floating 1.3s ease-in-out infinite alternate;
+    animation: floating 1.3s ease-in-out infinite alternate;
+}
+
+.floating:hover{
+    -ms-animation-play-state:paused;
+    -webkit-animation-play-state:paused;
+    animation-play-state:paused;
+}
+
+.floating.delay{
+    -ms-animation-delay:.6s;
+    -webkit-animation-delay:.6s;
+    animation-delay:.6s;
+}
+
+@-ms-keyframes floating{
+    from{
+        -ms-transform:translate(0,0);
+        opacity: .8;
+    }
+    to{
+        -ms-transform:translate(0,12px);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes floating{
+    from{
+        -webkit-transform:translate(0,0);
+        opacity: .8;
+    }
+    to{
+        -webkit-transform:translate(0,12px);
+        opacity: 1;
+    }
+}
+@keyframes floating{
+    from{
+        transform:translate(0,0);
+        opacity: .8;
+    }
+    to{
+        transform:translate(0,12px);
+        opacity: 1;
+    }
+}
